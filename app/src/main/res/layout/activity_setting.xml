@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundTab">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="exitUntilCollapsed|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.AppCompat.Light" />
+
+            <TextView
+                android:id="@+id/titleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/setting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_text_titlebar"
+                app:layout_collapseMode="pin" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:id="@+id/scTampilan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/crLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/size_20dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="@string/language"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/size_text_18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/size_20dp"
+                            android:background="@color/backgroundTab2" />
+
+                        <RelativeLayout
+                            android:id="@+id/klikLanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/imgLanguage"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/size_20dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginEnd="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:padding="@dimen/margin_5dp"
+                                android:src="@drawable/language" />
+
+                            <TextView
+                                android:id="@+id/txtBahasa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_5dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_toEndOf="@id/imgLanguage"
+                                android:text="@string/txt_bahasa"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/size_text_15sp" />
+
+                            <TextView
+                                android:id="@+id/txtPilihBahasa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/txtBahasa"
+                                android:layout_marginLeft="@dimen/margin_5dp"
+                                android:layout_toEndOf="@id/imgLanguage"
+                                android:text="@string/pilih_bahasa"
+                                android:textColor="@color/text_standar"
+                                android:textSize="@dimen/size_text_13sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/crDailyReminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/size_20dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="@string/reminder"
+                                android:textColor="@color/colorText"
+                                android:textSize="@dimen/size_text_18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/size_20dp"
+                            android:background="@color/backgroundTab2" />
+
+                        <RelativeLayout
+                            android:id="@+id/klikDailyReminder1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.4"
+                            android:background="?attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/imgDailyReminder"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/size_20dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginEnd="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:padding="@dimen/margin_5dp"
+                                android:src="@drawable/daily" />
+
+                            <LinearLayout
+                                android:id="@+id/lnDailyReminder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_5dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:layout_toStartOf="@id/lnLine1"
+                                android:layout_toEndOf="@id/imgDailyReminder"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtDailyReminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/imgDailyReminder"
+                                    android:text="@string/daily_reminder"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="@dimen/size_text_15sp" />
+
+                                <TextView
+                                    android:id="@+id/txtPilihDailyReminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/txtDailyReminder"
+                                    android:text="@string/turn_it_on_to_get_notifications_every_day"
+                                    android:textColor="@color/text_standar"
+                                    android:textSize="@dimen/size_text_13sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/lnLine1"
+                                android:layout_width="1dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@id/DailyReminder"
+                                android:background="@color/backgroundTab" />
+
+                            <RelativeLayout
+                                android:id="@+id/DailyReminder"
+                                android:layout_width="70dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true">
+
+                                <Switch
+                                    android:id="@+id/klikDailyReminder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="@dimen/margin_10dp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="75dp"
+                            android:background="@color/backgroundTab2" />
+
+                        <RelativeLayout
+                            android:id="@+id/klikReleaseTodayReminder1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.4"
+                            android:background="?attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/imgReleaseTodayReminder"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/size_20dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginEnd="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:padding="@dimen/margin_5dp"
+                                android:src="@drawable/release" />
+
+                            <LinearLayout
+                                android:id="@+id/lnTodayReminder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_5dp"
+                                android:layout_marginTop="@dimen/margin_10dp"
+                                android:layout_marginBottom="@dimen/margin_10dp"
+                                android:layout_toStartOf="@id/lnLine"
+                                android:layout_toEndOf="@id/imgReleaseTodayReminder"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtReleaseTodayReminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/release_today_reminder"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="@dimen/size_text_15sp" />
+
+                                <TextView
+                                    android:id="@+id/txtPiliheleaseTodayReminder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/turn_it_on_to_get_new_movie_notifications"
+                                    android:textColor="@color/text_standar"
+                                    android:textSize="@dimen/size_text_13sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/lnLine"
+                                android:layout_width="1dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:layout_toLeftOf="@id/ReleaseTodayReminder"
+                                android:background="@color/backgroundTab" />
+
+                            <RelativeLayout
+                                android:id="@+id/ReleaseTodayReminder"
+                                android:layout_width="70dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true">
+
+                                <Switch
+                                    android:id="@+id/klikReleaseTodayReminder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="@dimen/margin_10dp" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
