@@ -1,5 +1,6 @@
 # Katalog-Film
 Aplikasi Katalog Film ^-^
+ini adalah beberapa case atau exploration tentang mobile apss
 
 Aplikasi Katalog Film mempunya banyak fitur yang sangat menarik. semoga teman-teman yang ingin mempelajari kode dari aplikasi ini dapat terbantu dengan mudah.
 
